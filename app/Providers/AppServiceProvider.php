@@ -19,6 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // config()->set('app.url', 'http://192.168.1.13:8001');
     }
 }
