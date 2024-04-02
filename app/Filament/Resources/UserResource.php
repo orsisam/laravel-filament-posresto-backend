@@ -41,6 +41,10 @@ class UserResource extends Resource
                     ->dehydrated(fn ($state) => filled($state))
                     ->required(fn ($livewire) => ($livewire instanceof CreateRecord))
                     ->maxLength(255),
+                TextInput::make('phone')
+                    ->label('Phone number')
+                    ->tel()
+                    ->maxLength(255),
                 Select::make('roles')
                     ->relationship('roles', 'name')
                     ->required(),
@@ -55,6 +59,8 @@ class UserResource extends Resource
                     ->searchable(),
                 TextColumn::make('email')
                     ->searchable(),
+                TextColumn::make('phone')
+                    ->label('Phone number'),
                 TextColumn::make('roles.name'),
             ])
             ->filters([
