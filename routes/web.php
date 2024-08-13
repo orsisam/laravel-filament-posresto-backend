@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [TestController::class, 'index']);
+// Route::get('/testing', [TestController::class, 'index']);
