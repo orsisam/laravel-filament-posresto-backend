@@ -36,7 +36,7 @@ class CategoryResource extends Resource
                     ->visibility('private')
                     ->directory('categories')
                     ->imageEditor(2)
-                    ->maxSize(2048),
+                    ->maxSize(4000),
                 TextInput::make('name')
                     ->label('Category name')
                     ->required()
@@ -57,7 +57,7 @@ class CategoryResource extends Resource
                 TextColumn::make('name')
                     ->label('Category')
                     ->searchable()
-                    ->description(fn (Category $category): string => ($category->description) ? $category->description : 'no description'),
+                    ->description(fn(Category $category): string => ($category->description) ? $category->description : 'no description'),
                 // TextColumn::make('description')
                 // ->
             ])
